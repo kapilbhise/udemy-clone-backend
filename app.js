@@ -43,10 +43,7 @@ app.use(ErrorMiddleware);
 
 app.get("/", (req, res) => {
   return res.send(
-    // `<h1>Site is working properly. Click <a href=${process.env.FRONTEND_URL}>here</a> to visit frontend.</h1>`
-    {
-      message: "Site is working properly.",
-    }
+    `<h1>Site is working properly. Click <a href=${process.env.FRONTEND_URL}>here</a> to visit frontend.</h1>`
   );
 });
 export default app;
