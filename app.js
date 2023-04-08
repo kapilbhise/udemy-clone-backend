@@ -23,7 +23,13 @@ app.use(
     extended: true,
   })
 );
-app.use(cors());
+app.use(
+  cors({
+    origin: process.env.FRONTEND_URL,
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE"],
+  })
+);
 app.use(cookieParser());
 
 // using routes
@@ -33,6 +39,11 @@ app.use("/api/v1", payment);
 app.use("/api/v1", other);
 
 //use middleware
-
 app.use(ErrorMiddleware);
+
+app.get("/", (req, res) => {
+  return res.send(
+    `<h1>Site is working properly. Click <a href=${process.env.FRONTEND_URL}>here</a> to visit frontend.</h1>`
+  );
+});
 export default app;
