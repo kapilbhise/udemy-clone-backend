@@ -1,10 +1,12 @@
 import { catchAsyncError } from "../middlewares/catchAsyncError.js";
-import ErrorHandler from "../utils/ErrorHandler.js";
 import { instance } from "../server.js";
 import crypto from "crypto";
 // import models
 import { User } from "../models/User.js";
 import { Payment } from "../models/Payment.js";
+
+// error Handler
+import ErrorHandler from "../ErrorHandler.js";
 
 // buy a subscription
 export const buySubscription = catchAsyncError(async (req, res, next) => {

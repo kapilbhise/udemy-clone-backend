@@ -4,7 +4,7 @@ import { Course } from "../models/Course.js";
 import getDataUri from "../utils/dataURI.js";
 
 //errorHandler
-import ErrorHandler from "../utils/ErrorHandler.js";
+import ErrorHandler from "../ErrorHandler.js";
 
 // get all courses without lectures
 export const getAllCourses = catchAsyncError(async (req, res, next) => {

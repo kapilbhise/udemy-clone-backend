@@ -1,7 +1,6 @@
 import { catchAsyncError } from "../middlewares/catchAsyncError.js";
 import { User } from "../models/User.js";
 import { Course } from "../models/Course.js";
-import ErrorHandler from "../utils/ErrorHandler.js";
 
 import { sendMail } from "../utils/sendEmail.js";
 import { sendToken } from "../utils/sendToken.js";
@@ -9,6 +8,9 @@ import getDataUri from "../utils/dataURI.js";
 import crypto from "crypto";
 import cloudinary from "cloudinary";
 import { Stats } from "../models/Stats.js";
+
+//errorHandler
+import ErrorHandler from "../ErrorHandler.js";
 
 //register user
 export const register = catchAsyncError(async (req, res, next) => {

@@ -1,4 +1,4 @@
-import { Error } from "mongoose";
+
 
 class ErrorHandler extends Error {
   constructor(message, statusCode) {
