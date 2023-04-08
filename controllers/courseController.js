@@ -4,6 +4,7 @@ import { Course } from "../models/Course.js";
 import getDataUri from "../utils/dataURI.js";
 import ErrorHandler from "../utils/ErrorHandler.js";
 
+
 // get all courses without lectures
 export const getAllCourses = catchAsyncError(async (req, res, next) => {
   const keyword = req.query.keyword || "";
