@@ -208,6 +208,7 @@ export const deleteLecture = catchAsyncError(async (req, res, next) => {
 });
 // export default { getAllCourses };
 
+// monitor courses and update the stats views
 Course.watch().on("change", async () => {
   const stats = await Stats.find({}).sort({ createdAt: "desc" }).limit(1);
 
