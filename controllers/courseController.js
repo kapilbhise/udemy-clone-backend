@@ -1,8 +1,8 @@
 import cloudinary from "cloudinary";
 import { catchAsyncError } from "../middlewares/catchAsyncError.js";
 import { Course } from "../models/Course.js";
-import ErrorHandler from "../utils/ErrorHandler.js";
 import getDataUri from "../utils/dataURI.js";
+import ErrorHandler from "../utils/ErrorHandler.js";
 
 // get all courses without lectures
 export const getAllCourses = catchAsyncError(async (req, res, next) => {
